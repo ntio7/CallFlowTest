@@ -1,0 +1,22 @@
+<!-- Toolbar -->
+
+
+
+<div>
+  <div class=side-menu>
+    <div (click)="onItemClick($event)" class="nav-item">
+      <a class="nav-link" routerLink="home">ראשי</a>
+    </div>
+    <div (click)="onItemClick($event)" class="nav-item">
+      <a class="nav-link" routerLink="create">יצירת/עדכון <br>פרטי לקוח</a>
+    </div>
+    <div (click)="onItemClick($event)" class="nav-item">
+      <a class="nav-link" routerLink="find">חיפוש לקוח</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

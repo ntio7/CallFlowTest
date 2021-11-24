@@ -1,0 +1,9 @@
+.side-menu{
+    float: right;
+    margin: 10px;
+    padding: 10px;;
+}
+
+.active{
+    background-color: aqua;
+}

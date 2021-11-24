@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="card">
+        <div class="card-header">
+          <h3>יצירת/עדכון פרטי לקוח</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="" class="">אמצעי זיהוי :</label>
+            <select name="searchParam" id="searchParam" class="form-control chosen-select"
+              (change)="onChange($event.target.value)">
+              <option value="" disabled selected>בחר ערך לחיפוש</option>
+              <option value="1">תעודת זהות</option>
+              <option value="2">מספר טלפון</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>הזן ערך לחיפוש</label>
+            <input type="text" name="searchValue" id="searchValue"  [(ngModel)]="req.searchValue" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="button" (click)="SearchBtn()" class="btn btn-info">חפש לקוח</button>
+          </div>
+
+          <div class="form-group">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">שם משפחה</th>
+                  <th scope="col">שם פרטי</th>
+                  <th scope="col">טלפון</th>
+                  <th scope="col">תעודת זהות</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let client of clients"  >
+                  <td>{{client.lastName}}</td>
+                  <td>{{client.firstName}}</td>
+                  <td>{{client.phone}}</td>
+                  <td><a class="nav-link" routerLink="../create/{{client.Id}}">{{client.idNumber}}</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

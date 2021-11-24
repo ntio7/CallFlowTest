@@ -1,0 +1,16 @@
+h1 {
+    margin: auto;
+    text-align: center;
+    font-size: 77px;
+    color: blue;
+}
+
+.BGIMG{
+
+    height: 500px;
+    width: 700px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-image:  url("https://y26uq11r8xr1zyp0d3inciqv-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/11-1.jpg")
+}
