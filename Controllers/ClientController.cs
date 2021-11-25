@@ -20,11 +20,11 @@ namespace MyCallFlowApi.Controllers
         //     return await new Repository().GetTitle();
         // }
 
-        // [HttpPost]
-        // public async Task<List<Client>> PostFilteredClients(SearchRequest req)
-        // {  
-        //     return await new Repository().GetFilteredClients(req);
-        // }
+        [HttpPost]
+        public async Task<List<Client>> PostFilteredClients(SearchRequest req)
+        {  
+            return await new Repository().GetFilteredClients(req);
+        }
 
 
         [HttpPost]
